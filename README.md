@@ -32,3 +32,12 @@
 
 * Список
     * Маркированый список
+####Как вставлять ссылки
+* Чтобы создать ссылку с фотогрфией,пишем '![Dog] (https://www.google.ru/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjt0_in6_rcAhULqYsKHTmHCdIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSfLV8hD7zX4&psig=AOvVaw2W1SiY9-p3mQU8NGL-kHqs&ust=1534827277242998)
+    * пример вставки ссылки :'[Название для ссылки](qeep.pro)'
+###Таблицы
+Первая колонка | Вторая колонка
+---------------|----------------
+ячейка 1       | Ячейка 3 
+ячейка 2       | Ячейка 4
+

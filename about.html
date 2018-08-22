@@ -10,11 +10,6 @@
     <title>
         лучший калькулятор в СНГ
     </title>
-    <script
-            type="text/javascript"
-            src="main.js"
-    >
-    </script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -25,40 +20,45 @@
     <thead>
     <tr>
         <td colspan="4">
-            <input type="text" id="num-input" title="полное ">
+            <input type="text" id="num-input" title="полное " value="0">
         </td>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td><button class="operation-button">1</button></td>
-        <td><button class="num-button">2</button></td>
-        <td><button class="num-button">3</button></td>
-        <td><button class="operation-button">+</button></td>
+        <td><button class="num-button" id="num1">1</button></td>
+        <td><button class="num-button" id="num2">2</button></td>
+        <td><button class="num-button" id="num3">3</button></td>
+        <td><button class="num-button" id="backspace-Button"><<</button></td>
 
     </tr>
 
     <tr>
-        <td><button class="num-button">4</button></td>
-        <td><button class="num-button">5</button></td>
-        <td><button class="num-button">6</button></td>
-        <td><button class="operation-button">-</button></td>
+        <td><button class="num-button" id="num4">4</button></td>
+        <td><button class="num-button" id="num5">5</button></td>
+        <td><button class="num-button" id="num6">6</button></td>
+        <td><button class="num-button" id="minus-Button">-</button></td>
     </tr>
     <tr>
-        <td><button class="num-button">7</button></td>
-        <td><button class="num-button">8</button></td>
-        <td><button class="num-button">9</button></td>
-        <td><button class="operation-button">/</button></td>
+        <td><button class="num-button" id="num7">7</button></td>
+        <td><button class="num-button" id="num8">8</button></td>
+        <td><button class="num-button" id="num9">9</button></td>
+        <td><button class="num-button" id="delete-Button">/</button></td>
     </tr>
     <tr>
-        <td><button class="num-button"><</button></td>
-        <td><button class="num-button">0</button></td>
-        <td><button class="num-button">%</button></td>
-        <td><button class="operation-button">x</button></td>
+        <td><button class="num-button" id="num.">.</button></td>
+        <td><button class="num-button" id="num0">0</button></td>
+        <td><button class="num-button" id="pulse-Button">+</button></td>
+        <td><button class="num-button" id="numX">X</button></td>
+        <td><button class="num-button" id="tex-Button">=</button></td>
     </tr>
 
 </table>
-привет, Тимур
+<script
+        type="text/javascript"
+        src="main.js"
+>
+</script>
 </body>
 </html>
 

@@ -1,6 +1,5 @@
 const input = document.getElementById('num-input');
 const numButtons = document.getElementsByClassName('num-button');
-let enterNumber;
 for (let i = 0; i < numButtons.length; i++) {
     const button = numButtons[i];
     const num = button.textContent;
@@ -8,16 +7,13 @@ for (let i = 0; i < numButtons.length; i++) {
         enterNumber(num)
     };
 }
-
-enterNumber = (n) => {
-
-    if (input.value === '0') {
-        input.value = n;
-    } else {
-        input.value = input.value + n;
+const pulseButton = document.getElementsByClassName("operation-button");
+[].forEach.call(pulseButton, (button) => {
+    button.onclick = () => {
+        dispatchOperation(button.textContent);
     }
+});
 
-};
 const backButton = document.getElementById('back-Button');
 backButton.onclick = () => {
     if (input.value.length === 1) {
@@ -25,6 +21,7 @@ backButton.onclick = () => {
     }
     else {
         input.value = input.value.slice(0, 0);
+        num = 0;
     }
 };
 const backspaceButton = document.getElementById('backspace-Button');
@@ -46,19 +43,46 @@ dotButton.onclick = () => {
     }
     input.value += ','
 };
-let num = null;
-let op = null;
-const pulseButton = document.getElementById('pulse-Button');
-pulseButton.onclick = () => {
-const n=enterNumber;
-    if (num == null) {
-        op = '+';
-        console.log('+')
-    }else{
-        if(op==null){
-            num=input.value;
-            input.value=n;
+let num = 0;
+let p = false;
+let lop=null;
+const enterNumber = (n) => {
+    if (input.value === '0') {
+        input.value = n;
+    } else {
+        if (p) {
+            num=parseFloat(input.value);
+            input.value = n;
+            p = false;
+        } else {
+            input.value = input.value + n;
         }
+    }
+
+};
+const dispatchOperation = (operation) => {
+
+    if (lop){
+        if(!p) {
+            num = processOperation(lop, num, parseFloat(input.value));
+            input.value = num;
+        }
+    }
+   p = true;
+    lop = operation;
+};
+const processOperation = (operation, argument1, argument2) => {
+    switch (operation) {
+        case '+':
+            return argument1 + argument2;
+        case '-':
+            return argument1 - argument2;
+        case 'X':
+            return argument1 * argument2;
+        case '/':
+            return argument1 / argument2;
+
+
     }
 };
 

@@ -1,21 +1,21 @@
-h1 {
-    text-align: center;
+H1 {
+    TEXT-ALIGN: CENTER;
 
 }
 
-
-
-table { border-collapse: collapse;
-
-}
-button{ height: 40px;
-    width: 40px;
-
+TABLE {
+    BORDER-COLLAPSE: COLLAPSE;
 }
 
-
-
-input{text-align: right;
-with:100% ;
+BUTTON {
+    HEIGHT: 40PX;
+    WIDTH: 40PX;
 }
 
+INPUT {
+    TEXT-ALIGN: RIGHT;
+}
+
+TABLE {
+    MARGIN: AUTO;
+}

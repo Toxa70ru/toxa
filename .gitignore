@@ -1,3 +1,4 @@
 .idea/
-index.html
-
+.vagrant/
+ubuntu*.log
+Vagrantfile

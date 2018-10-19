@@ -5,17 +5,11 @@
     <title>Коротко о Тохе и его тимейте </title>
 </head>
 <body>
-{%  set numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] %}
-<h1>Hello,
-    {% if username %}
-        {{ useername }}
-    {% else %}
-        World,
-    {%- endif -%}
-    {{ username }} when playing on Kar98!</h1>
-<h10>#Жаль Илюшку(рака) и его телефон!</h10>
-{% for number in numbers %}
-<h2> Header #{{ number }}</h2>
-{% endfor %}
+{% if username %}
+    <h1>Hello,{{ username }} when playing on Kar98!</h1>
+{% else %}
+    <h2>Error</h2>
+{% endif %}
+{% include 'links.html' %}
 </body>
 </html>

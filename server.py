@@ -3,9 +3,14 @@ app = Flask(__name__)   #__main__
 
 def generate_links():
     with app.test_request_context():
-        Toxa_the_great_link=url_for('hello_user',username='Toxa')
-        index_link = url_for('index')
-        links = (('Toxa`s page',Toxa_the_great_link),('Index',index_link),)
+        Toxa_the_great_link = url_for('hello_user',username = 'Toxa')
+        index_link = url_for('index',
+                             param1 = 'param1',
+                             param2 = 'param2'
+                             )
+        links = {"Toxa`s page": Toxa_the_great_link,
+                 'Index': index_link
+                 }
     return  links
 @app.route('/')
 def index():

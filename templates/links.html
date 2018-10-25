@@ -1,5 +1,5 @@
-<ul>
-    {% for title,link in links %}
+<ul class="navigation" >
+    {% for title,link in links.items() %}
         <li>
         <a href="{{ link }}">{{ title }}</a>
         </li>

@@ -2,6 +2,14 @@
 {% block title %} Our first page with Python {% endblock %}
 
 {% block content %}
-    <h1>Hello World!</h1>
+   <div class="jumbotron">
+        <div class="container">
+            {% if username %}
+                <h1 class="display-3">Hello, {{ username }}</h1>
+            {% else %}
+                <h1 class="display-3">Hello World!</h1>
+            {% endif %}
+        </div>
+   </div>
 {% endblock %}
 

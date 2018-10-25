@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Коротко о Тохе и его тимейте </title>
-    <link rel="stylesheet" href="{{ url_for ('static', filename = 'static.css') }}">
-</head>
-<body>
-{% if username %}
-    <h1>Hello,{{ username }} when playing on Kar98!</h1>
-{% else %}
-    <h2>Error</h2>
-{% endif %}
-{% include 'links.html' %}
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}User profile {% endblock %}
+{% block content %}
+    {% if username %}
+        <h1>Hello,{{ username }} )</h1>
+    {% else %}
+        <h2>Error</h2>
+    {% endif %}
+{% endblock %}
